@@ -9,3 +9,10 @@ Los datos recopilados revelaron que la elección de los clientes en su próxima 
 | **Big Mac**       | 0.6       | 0.2      | 0.2          |
 | **McFlurry**      | 0.3       | 0.5      | 0.2          |
 | **Papas Fritas**  | 0.4       | 0.1      | 0.5          |
+
+-Si un cliente eligió una Big Mac en su última visita, tiene un 60% de probabilidad de volver a elegir Big Mac, un 20% de elegir McFlurry, y un 20% de elegir Papas Fritas.
+-Si un cliente eligió un McFlurry, tiene un 30% de probabilidad de elegir Big Mac, un 50% de repetir McFlurry, y un 20% de elegir Papas Fritas.
+-Si un cliente eligió Papas Fritas, tiene un 40% de probabilidad de cambiar a Big Mac, un 10% de elegir McFlurry, y un 50% de repetir Papas Fritas.
+La probabilidad de la eleccion de los clientes en su primera visita esta dada por el vector v0, el cual sera ingresado por el usuario. En base a esto calcular la probabilidad estacionaria de cada producto
+
+El programa debe ser ejecutado como python3 main.py
