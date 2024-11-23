@@ -37,7 +37,7 @@ def lanzarInterfaz(ruta_readme,matriz):
     # Crear ventana
     ventana = tk.Tk()
     ventana.title("Problema Cadena de Markov")
-    ventana.geometry("800x600")
+    ventana.geometry("900x900")
 
     # Crear un frame para el texto antes de la tabla
     frame_texto_antes = tk.Frame(ventana)
@@ -94,5 +94,6 @@ b[-1] = 1  #Condicion de que la suma de los pi sea igual a 1
 # Resolver el sistema de ecuaciones
 pi = np.linalg.lstsq(A, b, rcond=None)[0]
 
-print("La probabilidad estacionaria es:", pi)
+print("\nLa probabilidad estacionaria es: \n"+"Big Mac: "+str(pi[0]*100)+"%\nMcFlurry: "+str(pi[1]*100)+"%\nPapas Fritas: "+str(pi[2]*100)+"%")
+
 lanzarInterfaz("readme.md",pi)
