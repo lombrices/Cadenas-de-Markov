@@ -27,23 +27,28 @@ def lanzarInterfaz(ruta_readme,matriz):
     
     with open(ruta_readme, 'r', encoding='utf-8') as archivo:
         contenido = archivo.read()
+    contenido = contenido.split("#")[3]
+    contenido = contenido.replace('#', '')
+    contenido = contenido.replace('*', '')
+    contenido = contenido.replace('$', '')
+    contenido = contenido.replace('\\', '')
 
     partes = contenido.split("| Producto Actual")
     antes_tabla = partes[0].strip()
    
     despues_tabla=partes[1].split("0.5          |\n\n")[1]
-    despues_tabla+="\nLa probabilidad estacionaria es: \n"+"Big Mac: "+str(matriz[0])+"\nMcFlurry: "+str(matriz[1])+"\nPapas Fritas: "+str(matriz[2])
+    despues_tabla+="\nLa probabilidad estacionaria es: \n"+"Big Mac: "+str(matriz[0]*100)+"%\nMcFlurry: "+str(matriz[1]*100)+"%\nPapas Fritas: "+str(matriz[2]*100) + "%"
 
     # Crear ventana
     ventana = tk.Tk()
     ventana.title("Problema Cadena de Markov")
-    ventana.geometry("900x900")
+    ventana.geometry("820x720")
 
     # Crear un frame para el texto antes de la tabla
     frame_texto_antes = tk.Frame(ventana)
     frame_texto_antes.pack(side=tk.TOP, expand=True, fill=tk.BOTH, padx=10, pady=5)
 
-    texto_antes = scrolledtext.ScrolledText(frame_texto_antes, wrap=tk.WORD, height=7, font=("Arial", 12))
+    texto_antes = scrolledtext.ScrolledText(frame_texto_antes, wrap=tk.WORD, height=10, font=("Arial", 12))
     texto_antes.pack(expand=True, fill=tk.BOTH)
     texto_antes.insert(tk.INSERT, antes_tabla)
     texto_antes.configure(state='disabled')  # Desactivar edición
@@ -57,7 +62,7 @@ def lanzarInterfaz(ruta_readme,matriz):
     frame_texto_despues = tk.Frame(ventana)
     frame_texto_despues.pack(side=tk.BOTTOM, expand=True, fill=tk.BOTH, padx=10, pady=5)
 
-    texto_despues = scrolledtext.ScrolledText(frame_texto_despues, wrap=tk.WORD, height=10, font=("Arial", 12))
+    texto_despues = scrolledtext.ScrolledText(frame_texto_despues, wrap=tk.WORD, height=7, font=("Arial", 12))
     texto_despues.pack(expand=True, fill=tk.BOTH)
     texto_despues.insert(tk.INSERT, despues_tabla)
     texto_despues.configure(state='disabled')  # Desactivar edición
