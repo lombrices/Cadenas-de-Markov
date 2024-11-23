@@ -6,6 +6,7 @@ marketing para tener mas ventas. El estudio se centró en sus 3 productos princi
 -El helado Mc Flurry
 
 -Las Papas fritas 
+
 Los datos recopilados revelaron que la elección de los clientes en su próxima visita depende mayoritariamente de lo que eligieron en su visita anterior. A partir de esta información, se construyó la siguiente matriz de transición de probabilidades, que muestra las posibles elecciones de los clientes en su proxima visita. Al finalizar el estudio, se obtuvieron los siguientes resultados:
 | Producto Actual   | Big Mac   | McFlurry | Papas Fritas |
 |-------------------|-----------|----------|--------------|
