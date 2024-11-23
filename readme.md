@@ -23,7 +23,6 @@ Los datos recopilados revelaron que la elección de los clientes en su próxima 
 - Si un cliente eligió un McFlurry, tiene un $30\%$ de probabilidad de elegir Big Mac, un $50\%$ de repetir McFlurry, y un $20\%$ de elegir Papas Fritas.
 
 - Si un cliente eligió Papas Fritas, tiene un $40\%$ de probabilidad de cambiar a Big Mac, un $10\%$ de elegir McFlurry, y un $50\%$ de repetir Papas Fritas.
-En base a esto calcular la probabilidad estacionaria de cada producto
 
 ## Ejecucion
 
